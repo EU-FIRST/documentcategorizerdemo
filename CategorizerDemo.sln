@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CategorizerDemo", "c:\work\firstdemos\CategorizerDemo\", "{30C52E39-2A8F-4F2D-AB89-B17B119950CE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/PrecompiledWeb"
+		Debug.AspNetCompiler.PhysicalPath = "..\CategorizerDemo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PrecompiledWeb"
+		Release.AspNetCompiler.PhysicalPath = "..\CategorizerDemo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58857"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30C52E39-2A8F-4F2D-AB89-B17B119950CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C52E39-2A8F-4F2D-AB89-B17B119950CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C52E39-2A8F-4F2D-AB89-B17B119950CE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C52E39-2A8F-4F2D-AB89-B17B119950CE}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

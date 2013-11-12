@@ -1,0 +1,5 @@
+.svn/
+*.bak
+*.suo
+UpgradeLog.xml
+_UpgradeReport_Files/

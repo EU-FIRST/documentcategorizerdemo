@@ -1,0 +1,64 @@
+/*==========================================================================;
+ *
+ *  (...)
+ *
+ *  File:    First.css
+ *  Desc:    CSS
+ *  Created: Oct-2011
+ *
+ *  Author:  Miha Grcar
+ *
+ ***************************************************************************/
+	
+div.button { text-align: center; cursor: pointer; height: 41px; line-height: 41px; background: url("Img/btn_bg.png") repeat-x; }
+div.button_leftBorder { position: relative; top: 0; left: 0; height: 100%; width: 100%; background: url("Img/btn_left.png") no-repeat left top; }
+div.button_rightBorder { position: relative; top: 0; left: 0; height: 100%; width: 100%; background: url("Img/btn_right.png") no-repeat right top; }
+div.button:hover { text-align: center; cursor: pointer; height: 41px; line-height: 41px; background: url("Img/btn_bg_hover.png") repeat-x; }
+div.button_leftBorder:hover { position: relative; top: 0; left: 0; height: 100%; width: 100%; background: url("Img/btn_left_hover.png") no-repeat left top; }
+div.button_rightBorder:hover { position: relative; top: 0; left: 0; height: 100%; width: 100%; background: url("Img/btn_right_hover.png") no-repeat right top; }
+
+div.header { width: 800px; text-align: right; font-size: 80%; }
+
+.inputContainer { border: 1px solid #4D90FE; padding: 3px; }
+input, textarea { font-size: 100%; font-family: helvetica; border: 0; -webkit-appearance: none; resize: none; }  
+
+.copyright { font-size: 80%; }
+
+a:link, a:visited, a:active, a:hover { color: #3C64B6; outline: 0; }
+
+img { border: 0; }
+td { vertical-align: top; padding: 3px; } 
+ul { margin-left: 14px; }
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+* {margin: 0; padding: 0; font-family: helvetica;} 
+
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html, body {height: 100%; min-width: 800px;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow: hidden;
+	padding-bottom: 150px;} 
+
+#footer {position: relative;
+	margin-top: -100px; /* negative value of footer height */
+	height: 100px;
+	clear: both;} 
+
+/* Opera Fix */
+body:before { /* thanks to Maleika (Kohoutec) */
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px;} /* thank you Erik J - negate effect of float */

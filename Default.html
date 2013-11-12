@@ -1,0 +1,91 @@
+<!--========================================================================;
+ *
+ *  This file is part of the FIRST open-source software. 
+ *  See http://project-first.eu/
+ *
+ *  File:    Default.html
+ *  Desc:    Categorizer demo entry page
+ *  Created: Aug-2012
+ *
+ *  Author:  Miha Grcar
+ *
+ *************************************************************************-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Categorizer Demo</title>
+    <link href="Common/Css/First.css" rel="stylesheet" type="text/css" />   
+    <script type="text/javascript" src="Common/Js/First.js"></script> 
+    <script type="text/javascript">
+        first.preloadButtonImages();
+
+        var ajaxRunning 
+            = false;
+
+        function ajaxResponse(status, response) {
+            if (status != 200) {
+                document.getElementById("message").innerHTML = "Oops, something went wrong.";
+            }
+            else {
+                document.getElementById("message").innerHTML = "<pre>" + response + "</pre>";
+            }
+            ajaxRunning = false;
+        }
+
+        function ajaxRequest() {
+            if (!ajaxRunning) {                
+                var text = document.getElementById("text").value;
+                if (text == "") {
+                    alert("Please enter some text first.");
+                    return;
+                }
+                var url = "CategorizerDemo.aspx?text=" + escape(text);
+                var msgDiv = document.getElementById("message");
+                msgDiv.innerHTML = "<center><img src='Common/Img/Loading.gif' /></center>";
+                msgDiv.style.display = "";
+                ajaxRunning = true;
+                first.processAjax(url, ajaxResponse);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+    <div id="main">        
+        <center>
+        <div class="header"><a href="">&lt;&lt; Home</a></div>
+        <div style="width: 800px;">        
+            <h1>Categorizer Demo</h1>
+            <br />
+            <br />
+            Enter text:<br />
+            <br />
+            <div class="inputContainer" style="width: 590px; height: 300px;">        
+                <textarea id="text" cols="28" rows="21" style="width: 588px; height: 300px;">Germany's economic success relative to the rest of the euro zone is well documented - but the threat of further euro zone trouble could bring its triple-A rating into question. Germany is the only major advanced economy which has managed to achieve a lower unemployment rate in the first half of 2012 than in 2007 before the global financial crisis. Germany's exports could benefit from a weaker euro (EUR) if peripheral countries like Greece are able to stay within the single currency, and it has tried to ensure they do. The country is contributing 29 percent of the funds to the European Financial Stability Facility, so some would argue that they have a right to question how that money is being spent.</textarea>
+            </div>
+            <br />
+            <div style="display: none; width: 590px; text-align: left;" id="message"></div>
+            <br />
+            <div class="button" style="width: 10em;" onclick="ajaxRequest();"><div class="button_leftBorder"><div class="button_rightBorder">Categorize</div></div></div>
+        </div>
+        </center>
+    </div>
+    </div>
+    <div id="footer">
+        <center>
+        <div style="width: 800px;">
+            <div style="float: left; height: 100px; line-height: 80px;"><a href="http://project-first.eu/"><img style="vertical-align: middle;" src="Common/Img/FIRSTLogoSmall.gif" alt="FIRST Logo" /></a></div>
+            <div style="float: right; height: 100px; line-height: 80px;"><a href="http://cordis.europa.eu/info-management/"><img style="vertical-align: middle;" src="Common/Img/EULogoSmall.gif" alt="EU Logo" /></a></div>
+            <a href="http://www.ijs.si/"><img src="Common/Img/JSILogoSmall.gif" alt="JSI Logo" /></a><br />
+            <span class="copyright">&copy; 2011 <a href="http://kt.ijs.si">Department of Knowledge Technologies</a>. Co-funded by the <a href="http://cordis.europa.eu/info-management/">European Union</a>.</span>
+        </div>
+        </center>
+    </div>
+</body>
+
+</html>
